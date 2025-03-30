@@ -50,6 +50,3 @@ bun test
 
 - Add numbers using commas or newlines as separators
 - Support for custom delimiters (e.g., "//;\n1;2;3")
-- Input validation and error handling
-- Real-time calculation
-
