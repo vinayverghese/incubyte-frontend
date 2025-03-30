@@ -3,10 +3,7 @@ export function add(numbers: string): number {
         return 0;
     }
 
-    const num = parseInt(numbers);
-    if (!isNaN(num)) {
-        return num;
-    }
+    const numberArray = numbers.split(',').map(num => parseInt(num.trim()));
 
-    return 0;
+    return numberArray.reduce((sum, num) => sum + num, 0);
 } 
