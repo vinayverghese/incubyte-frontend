@@ -24,6 +24,18 @@ function App() {
     }
   }
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+
+    if (!value || value.startsWith('//')) {
+      setInput(value);
+      return;
+    }
+
+    const filtered = value.replace(/[a-zA-Z]/g, '');
+    setInput(filtered);
+  };
+
   return (
     <div className="calculator-container">
       <h1>String Calculator</h1>
@@ -33,7 +45,7 @@ function App() {
           <textarea
             id="numbers"
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={handleInputChange}
             onKeyPress={handleKeyPress}
             placeholder="Example: 1,2,3&#10;Or: 1&#10;2&#10;3&#10;Or with custom delimiter: //;&#10;1;2;3"
             rows={5}
