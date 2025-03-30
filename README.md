@@ -1,6 +1,11 @@
 # String Calculator
 
-A simple calculator that adds numbers from a string input, supporting various delimiters.
+A simple calculator that adds numbers from a string input, supporting various delimiters
+
+## Features
+
+- Add numbers using commas or newlines as separators
+- Support for custom delimiters (e.g., "//;\n1;2;3")
 
 ## Getting Started
 
@@ -41,12 +46,7 @@ bun test
 ```
 
 ## Local url
-`http://localhost:5173` (or the next available port).
+`http://localhost:5173` (or the next available port)
 
 ## Public url
 `https://incubyte-frontend-eight.vercel.app`
-
-## Features
-
-- Add numbers using commas or newlines as separators
-- Support for custom delimiters (e.g., "//;\n1;2;3")
