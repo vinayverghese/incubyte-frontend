@@ -7,7 +7,6 @@ export function add(numbers: string): number {
     if (numbers.startsWith("//")) {
         const match = numbers.match(/^\/\/(.+)\n/);
         if (match) {
-            // Escape special regex characters in the delimiter
             const escapedDelimiter = match[1].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             delimiter = new RegExp(escapedDelimiter);
             numbersToProcess = numbers.slice(match[0].length);
